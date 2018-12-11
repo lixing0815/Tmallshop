@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		li{
+			list-style:none;
+		}
+		#header{
+			background:;
+		}
+		#header div{
+			width:990px;
+			margin:0 auto;
+			border-bottom:1px solid #e6e6e6;
+			text-align:center;
+		}
+		#header div h4{
+			width:214px;
+			height:34px;
+			padding-top:12px;
+			border-bottom:1px solid #ff0036;
+			margin-left:401px;
+		}
+		#header div h4 span{
+			width:24px;
+			height:24px;
+			display:inline-block;
+			border-radius:40% 40%;
+			background:#ff0036;
+			color:#fff;
+			margin-right:2px;
+		}
+		#content div{
+			width:990px;
+			margin:0 auto;
+			overflow:hidden;
+		}
+		#content ul{
+			float:left;
+			margin-left:270px;
+			margin-top:71px;
+		}
+		#content ul li{
+			width:103px;
+			text-align:right;
+			font-size:14px;
+			line-height:35px;
+			margin-bottom:23px;
+		}
+		#content ul li:nth-child(1),li:nth-child(4){
+			margin-bottom:43px;
+		}
+		#content ul li:nth-child(1),li:nth-child(2),li:nth-child(5){
+			font-size:14px;
+			color:#3c3c3c;
+			font-weight:900;
+		}
+		#content #form{
+			margin-top:71px;
+			margin-left:22px;
+			width:430px;
+
+			float:left;
+		}
+		#content #form #Uname_span,#pwd_span,#Apwd_span{
+			display: inline;
+			font-size:10px;
+		}
+		#content #form #s1{
+			margin-bottom:23px;
+			display:block;
+			font-size:14px;
+			height:35px;
+			line-height:35px;
+		}
+		#content #form input{
+			height:34px;
+			width:220px;
+			margin-bottom:23px;
+		}
+		#content #form input:nth-child(6){
+			margin-bottom:80px;
+		}
+		#content #form input:nth-child(1){
+			border:none;
+			margin-bottom:43px;
+		}
+		#content #form #btn{
+			border-radius:4px 4px;
+			border:none;
+			background:#ff0036;
+			color:#fff;
+			text-align:center;
+			line-height:34px;
+		}
+	</style>
+	<script type="text/javascript" src = '../js/jquery-1.11.3.js'></script>
+	<script type="text/javascript" src = '../js/ajax.js'></script>
+	<script type="text/javascript">
+				$(function(){
+						var isYes = true;
+						var isTrue = true;
+						var isOK = true;
+						$('#Uname').on('keyup',function(){
+						if(this.value.length < 6 || this.value.length > 18){
+							$('#Uname_span').html('长度应为6~18个字符').css('color','red');
+							isYes = false;
+						}else if(/\d/.test(this.value[0])){
+							$('#Uname_span').html('用户名必须应以英文字母开头').css('color','red');
+							isYes = false;
+						}else if(/\W/.test(this.value)){
+							$('#Uname_span').html('用户名需由字母、数字、下划线组成').css('color','red');
+							isYes = false;
+						}else{
+							isYes = true;
+							$('#Uname_span').html('输入成功 √').css('color','green');
+							
+						}
+					})
+					$("#pwd").on('keyup',function(){
+						if(this.value.length < 6 || this.value.length > 16){
+							$('#pwd_span').html('密码长度在6~20个字符').css('color','red');
+							isOK = false;
+						}else if(/[\s]/.test(this.value)){
+							$('#pwd_span').html('只能包含字母数字以及标点符号(除空格)').css('color','red');
+							isOK = false;
+						}else if(/^[a-zA-Z_]+$/.test(this.value) || /^\d+$/.test(this.value)){
+							$("#pwd_span").html('字母、数字和标点符号至少包含2种').css('color','red');
+							isOK = false;
+						}else{
+							$("#pwd_span").html('√').css('color','green');
+							isOK = true;
+						}
+					})
+					$('#Apwd').on('keyup',function func(){
+						if($('#pwd').val() !== this.value){
+							$("#Apwd_span").html('两次密码不一致，请重新设置密码').css('color','red');
+							isTrue = false;
+						}else{
+							$("#Apwd_span").html('√').css('color','green');
+							isTrue = true;
+						}	
+					})
+					$('#btn').on('click',function(){
+						if(isTrue && isOK && isYes){
+							("#form").submit();
+						}else{
+							return false;
+						}
+					})
+				
+			})
+
+	</script>
+</head>
+<body>
+	<div id = 'header'>
+		<div>
+			<h4><span>2</span>填写账号信息</h4>
+		</div>
+	</div>
+	<div id = 'content'>
+		<div>
+			<ul>
+				<li>登录名</li>
+				<li>请设置登陆密码</li>
+				<li>登录密码</li>
+				<li>密码确认</li>
+				<li>设置会员名</li>
+				<li>会员名</li>
+			</ul>
+			<form action="../php/res.php" id = 'form' method = 'post'  enctype="application/x-www-form-urlencoded">
+				<input type="text" id = 'Uname' name = 'username' >
+				<span id = 'Uname_span'></span>
+				<span id = 's1'>登录时验证，保护账号信息</span>
+				<input type="password" id = 'pwd'  placeholder = '设置你的登陆密码'>
+				<span id = 'pwd_span'></span>
+				<input type="password" id = 'Apwd' placeholder = '请再次输入你的密码' name = 'password'>
+				<span id = 'Apwd_span'></span>
+				<input type="text" id = 'Vname' name = 'Vname' placeholder = '会员名一旦设置成功，无法修改'><br>
+				<input type="submit" value = '提交' id = 'btn' >
+			</form>
+			<!-- <ul>
+				<li><span></span></li>
+				<li><span></span></li>
+				<li><span></span></li>
+				<li><span></span></li>
+			</ul> -->
+		</div>		
+	</div>
+</body>
+</html>

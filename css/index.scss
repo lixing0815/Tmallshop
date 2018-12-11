@@ -1,0 +1,209 @@
+	*{
+			margin:0;
+			padding:0;
+		}
+		a{
+			text-decoration:none;
+		}
+		li{
+			list-style:none;
+		}
+		.clear:after{
+            content:".";
+            clear:both;
+            display:block;
+            height:0;
+            overflow:hidden;
+            visibility:hidden;
+              }
+        #shopping-car{
+			width:317px;
+			position:fixed;
+			right:-282px;
+			height:785px;
+			z-index:999;
+			border:1px solid #000;
+			background:red;
+		}
+		#shopping-car .car-left{
+			width:36px;
+			height:785px;
+			background:#000;
+		} 
+		#shopping-car .car-left li:nth-child(1){
+			padding:12px 5px;
+			padding-top:184px;
+		}
+		#shopping-car .car-left li:nth-child(1) a{
+			color:#fff;
+			display: block;
+			width:26px;
+			height:26px;
+			border-radius:50% 50%;
+			border:1px solid #fff;
+		}
+		#shopping-car .car-left li:nth-child(2){
+			width:20px;
+			height:100px;
+			color:#fff;
+			padding:20px 8px 15px 8px;
+			text-align:center;
+			font-size:11px;
+		}
+		#shopping-car .car-left li:nth-child(2) span{
+			display:block;
+		}
+		#shopping-car .car-left li:nth-child(2) span .num{
+			padding:5px 0;
+		}
+		#header{
+			background:#f2f2f2;
+			border-bottom:1px solid #e5e5e5;
+			/*overflow:hidden;*/
+		}
+		#header .welcome{
+			width:1230px;
+			margin:0 auto;
+			background:#f2f2f2;
+		}
+		/*left*/
+		#header .welcome .W_left{
+			float:left;
+		}
+		#header .welcome .W_left li{
+			padding:11px 19px 10px 0;
+			float:left;
+			font-size:11px;
+			color:#999;
+		}
+		#header .welcome .W_left li a{
+			font-size:11px;
+			color:#999;
+		}
+		/*right*/
+		#header .welcome .W_right{
+			float:right;
+		}
+		#header .welcome .W_right li{
+			padding:11px 8px 10px 7px;
+			position:relative;
+			float:left;
+			font-size:11px;
+		}
+		#header .welcome .W_right span:nth-child(4){
+			margin-top:12px;
+			margin-left:15px;
+			float:left;
+			display:block;
+			width:1px;
+			height:14px;
+			background:#999;
+		}
+		/*a的统一样式*/
+		#header .welcome .W_right li a{
+			font-size:12px;
+			color:#999;
+			padding-right:8px;
+		}
+		#header .welcome .W_right li #My_tb,.collect,.business,.web{
+			background:url(images/bottom.jpg) no-repeat right center;
+		}
+		/*iconfont的样式*/
+		#header .welcome .W_right li a i{
+			padding-right:2px;
+			font-size:15px;
+			color:#ff0036;
+		}
+		#header .welcome .W_right li ul{
+			position:absolute;
+			display:block;
+			z-index:999;
+		}
+		#header .welcome .W_right li div{
+			position:absolute;
+			font-size:10px;
+		}
+		/*我的淘宝二级菜单的样式*/
+		#header .welcome .W_right li:nth-child(1) ul{
+			padding-top:10px;
+			border:1px solid #eee;
+			width:94px;
+			height:56px;
+			display:none;
+		}
+		#header .welcome .W_right li:nth-child(1) ul li{
+			margin:0;
+			padding:0;
+		}
+		#header .welcome .W_right li:nth-child(1) ul li a{
+			margin:0;
+			padding:8px 8px 0 8px;
+			display:block;
+		}
+		/*
+			鼠标滑过的样式
+		 */
+		#header .welcome .W_right .tb:hover{
+			background:#fff;
+		}
+		#header .welcome li:hover a{
+			text-decoration:underline;
+			color:red;
+		}
+		#header .welcome .W_left li:hover a{
+			text-decoration:none;
+		}
+		#header .welcome li:hover li ul,div{
+			display:block;
+			z-index:999;
+		}
+		/*收藏夹*/
+		#header .welcome .W_right li:nth-child(3) ul{
+			width:82px;
+			height:56px;
+			padding-top:10px;
+			border:1px solid #eee;
+			display:none;
+		}
+		#header .welcome .W_right li:nth-child(3) ul li{
+			margin:0;
+			padding:0;
+		}
+		#header .welcome .W_right li:nth-child(3) ul li a{
+			margin:0;
+			padding:8px 8px 0 8px;
+			display:block;
+		}
+		#header .welcome .W_right li:nth-child(7) div{
+			width:142px;
+			height:177px;
+			position:absolute;
+			margin-top:10px;
+			border:1px solid #eee;
+			left:-70px;
+			display:none;
+		}
+		#header .welcome .W_right li:nth-child(7) div ul{
+			margin:0 12px;
+			border-bottom:1px dashed #999;
+		}
+		#header .welcome .W_right li:nth-child(7) div ul li{
+			padding:0;
+			margin:0;
+		}
+		#header .welcome .W_right li:nth-child(7) div ul p{
+			margin-top:5px;
+			margin-bottom:5px;
+			color:#666;
+		}
+		#header .welcome .W_right li:nth-child(7) div ul:nth-child(2){
+			bottom:8px;
+		}
+		#header .welcome .W_right li:nth-child(7) div ul li{
+			margin:0 10px 8px 0;
+		}
+		#header .welcome .W_right li:nth-child(7) div ul li a{
+			font-size:11px;
+			padding:0;
+			margin:0;
+		}

@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+.clear:after {
+  content: '';
+  visibility: hidden;
+  overflow: hidden;
+  height: 0;
+  clear: both;
+  display: block; }
+
+#balance .JScontent {
+  width: 990px;
+  margin: 0 auto; }
+
+#balance .JScontent ul {
+  width: 990px;
+  height: 127px;
+  margin-bottom: 2px;
+  border: 1px solid #cccccc; }
+
+#balance .JScontent ul li, button, input {
+  float: left; }
+
+img {
+  width: 80px;
+  height: 80px; }
+
+#balance .JScontent ul li:nth-child(1) {
+  width: 128px;
+  height: 127px; }
+
+#balance .JScontent ul li:nth-child(2) {
+  width: 150px;
+  height: 127px;
+  margin-left: 23px;
+  margin-right: 50px;
+  font-size: 11px;
+  color: #3c3c3c; }
+
+#balance .JScontent ul li:nth-child(3) {
+  font-size: 12px;
+  color: #9c9c9c; }
+
+#balance .JScontent ul li:nth-child(4) {
+  font-size: 14px;
+  color: #3c3c3c; }
+
+#balance .JScontent ul #txt {
+  width: 39px;
+  height: 23px; }
+
+#balance .JScontent ul button {
+  width: 17px;
+  height: 23px; }
+
+#balance .JScontent ul li:nth-child(5), li:nth-child(6) {
+  float: right; }
+#balance .JScontent ul .YG{
+  width:30px;
+  overflow: hidden;
+}

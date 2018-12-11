@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script type="text/javascript">
+			var obj = {
+				id:['Hot','Mark','Help'],
+				title : ['热点推荐  Hot','行业市场 Market','服务指南 Help'],
+				descs:[{
+					id: 0,
+					text:['天猫超市','喵鲜生','科技新品','女装新品','酷玩街','内衣新品','试美妆','运动新品','时尚先生','精明妈咪','吃乐会','企业采购','会员积分','天猫国际','品质频道']
+				},{
+					id: 1,
+					text:['美妆','电器','女装','男装','女鞋','男鞋','内衣','鞋包','运动','母婴','家装','医药','食品','配饰','汽车']
+				},{
+					id: 2,
+					text:['帮助中心','品质保障','特色服务','7天退换货']
+				}]
+			}
+			var str = JSON.stringify(obj);
+			document.write(str);
+			alert(obj.descs[0].text.length);
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>
